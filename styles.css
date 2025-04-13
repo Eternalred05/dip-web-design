@@ -86,7 +86,7 @@ header {
   place-items: center;
   animation: blur 0.5s ease-in-out both;
   animation-timeline: scroll(block);
-  animation-range: 20px;
+  animation-range: 50px 200px;
 
   h4 {
     font-size: 1.8em;
@@ -177,6 +177,7 @@ header {
 .cards-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-template-rows: 200px 200px;
   gap: 1rem;
   margin-top: 50px;
   place-content: center;
@@ -199,8 +200,16 @@ article.card {
   border: 1px solid var(--border-clr);
   border-radius: 10px;
   position: relative;
-  height: 200px;
   overflow: hidden;
+
+  &:nth-child(4) {
+    grid-area: 2/2/2/4;
+  }
+
+  &:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 
   img {
     width: 100%;
