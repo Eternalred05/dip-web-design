@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
   <title>Tarea DIP (Periodo)</title>
 </head>
 
@@ -23,6 +24,40 @@
             <a href="#">Leer más</a>
           </div>
         </div>
+        <div class="carousel-item">
+          <img src="img/img.avif" alt="img1">
+          <div class="carousel-caption">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, doloremque.</p>
+            <a href="#">Leer más</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/img.avif" alt="img1">
+          <div class="carousel-caption">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, doloremque.</p>
+            <a href="#">Leer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <label>
+          <input type="radio" name="carrousel-control" checked>
+          <span class="placeholder active"></span>
+        </label>
+        <label>
+          <input type="radio" name="carrousel-control">
+          <span class="placeholder"></span>
+        </label>
+        <label>
+          <input type="radio" name="carrousel-control">
+          <span class="placeholder"></span>
+        </label>
+        <label>
+          <input type="radio" name="carrousel-control">
+          <span class="placeholder"></span>
+        </label>
       </div>
     </div>
     <section>
@@ -59,119 +94,71 @@
       </div>
     </section>
     <section id="timeline">
-      <h3>Línea de tiempo</h3>
+      <h3 id="timeline-title">Línea de tiempo</h3>
       <div id="timeline-layout">
         <div id="year-picker">
           <ul>
             <li class="active">
-              <a href="#">1968</a>
+              <a href="#fst-line">1975</a>
             </li>
             <li>
-              <a href="#">1971</a>
+              <a href="#nd-line">1978</a>
             </li>
             <li>
-              <a href="#">1974</a>
-            </li>
-            <li>
-              <a href="#">1975</a>
-            </li>
-            <li>
-              <a href="#">1979</a>
-            </li>
-            <li>
-              <a href="#">1983</a>
+              <a href="#thrd-line">1979</a>
             </li>
           </ul>
         </div>
         <div class="shadow"></div>
         <div id="timeline-wrapper">
-          <div>
-            <h4>3 de enero</h4>
-            <div class="grid-wrapper">
+          <div id="fst-line">
+            <div class="grid-wrapper fst-year">
               <article>
-                <h3>9:00 AM</h3>
-                <p>Life finds a way. You know what? It is beets. </p>
+                <h3>Aprobación de la Constitución</h3>
+                <p>Hecho sin precedentes que declaró a Cuba como un Estado Socialista de derecho y justicia social,
+                  democrático, independiente y soberano. Primera Constitución socialista del hemisferio Occidental.</p>
               </article>
               <article>
-                <h3>10:00 AM</h3>
-                <p>I've crashed into a beet truck </p>
+                <h3>Primer Congreso del PCC</h3>
+                <p>En esta etapa se lleva a cabo el Primer Congreso del Partido Comunista de Cuba.</p>
+                <img src="./img/primer-congreso-del-pcc.jpg" alt="Imagen del Primer Congreso del PCC">
               </article>
               <article>
-                <h3>12:30 AM</h3>
-                <p>I was part of something special. </p>
+                <h3>Establecimiento del Poder Popular</h3>
+                <p>La formación de la Asamblea Nacional de este órgano legislativo del país.</p>
+                <p>El país se encontraba en un contexto favorable en el marco de estabilidad alcanzada en las relaciones
+                  económicas con la URSS.</p>
+                <img src="./img/poder-popular.jpg" alt="Imagen de la Asamblea Nacional">
               </article>
               <article>
-                <h3>13:30 AM</h3>
-                <p>Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to
-                  think
-                  if
-                  they should. </p>
-                <img src="./img/timeline-img-1.jpg" alt="Black and white photo of a lake">
-              </article>
-              <article>
-                <h3>14:30 AM</h3>
-                <p>Just my luck, no ice. God help us, we're in the hands of engineers. </p>
-              </article>
-              <article>
-                <h3>15:30 AM</h3>
-                <p>I gave it a cold? I gave it a virus. A computer virus. </p>
-              </article>
-              <article>
-                <h3>16:30 AM</h3>
-                <p>God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates
-                  Dinosaurs.
-                </p>
-              </article>
-              <article>
-                <h3>17:30 AM</h3>
-                <p>What do they got in there? King Kong? </p>
-                <img src="./img/timeline-img-2.jpg" alt="Black and White Eiffel Tower"" alt=" Black and white Mountian
-                  view">
+                <h3>Participación democráctica</h3>
+                <p>6 millones de ciudadanos participaron en la discusión del anteproyecto en
+                  1975 de la Constitución que repercutieron en 60 artículos propuestos.</p>
               </article>
             </div>
           </div>
-          <div>
-            <h4>10 de febrero</h4>
+          <div id="nd-line">
             <div class="grid-wrapper">
               <article>
-                <h3>9:00 AM</h3>
-                <p>Life finds a way. You know what? It is beets. </p>
+                <h3>Cambio en las políticas migratorias</h3>
+                <p>En medio de las tensas situación del país con su emigración, se abordaron aspectos como las visitas a
+                  Cuba de los emigrados, la reunificación familiar, entre otras. Se autorizó a los emigrados cubanos la
+                  visita al país y la salida permanente a otros paises.</p>
+                <p>Al mismo tiempo, durante estos años EE.UU. promovió las salidas ilegales del país y negaba las cada
+                  vez más visas a los cubanos que deseaban llegar a EE.UU. legalmente.</p>
               </article>
+            </div>
+          </div>
+          <div id="thrd-line">
+            <div class="grid-wrapper">
               <article>
-                <h3>10:00 AM</h3>
-                <p>I've crashed into a beet truck </p>
-              </article>
-              <article>
-                <h3>12:30 AM</h3>
-                <p>I was part of something special. </p>
-              </article>
-              <article>
-                <h3>13:30 AM</h3>
-                <p>Yeah, but your scientists were so preoccupied with whether or not they could, they didn't stop to
-                  think
-                  if
-                  they should. </p>
-                <img src="./img/timeline-img-1.jpg" alt="Black and white photo of a lake">
-              </article>
-              <article>
-                <h3>14:30 AM</h3>
-                <p>Just my luck, no ice. God help us, we're in the hands of engineers. </p>
-              </article>
-              <article>
-                <h3>15:30 AM</h3>
-                <p>I gave it a cold? I gave it a virus. A computer virus. </p>
-              </article>
-              <article>
-                <h3>16:30 AM</h3>
-                <p>God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates
-                  Dinosaurs.
+                <h3>Éxodo del Mariel</h3>
+                <p>tuvo lugar entre abril y octubre de 1980.Durante este período, alrededor de 125,000 cubanos
+                  abandonaron la isla, aprovechando la apertura del gobierno cubano para que aquellos que deseaban
+                  emigrar pudieran hacerlo. Muchos de los que emigraron eran personas que, en su mayoría, habían sido
+                  influenciadas por la desinformación y la presión externa. A pesar de la difícil situación en Cuba, el
+                  gobierno continuó trabajando por el bienestar del pueblo y defendiendo los logros de la Revolución.
                 </p>
-              </article>
-              <article>
-                <h3>17:30 AM</h3>
-                <p>What do they got in there? King Kong? </p>
-                <img src="./img/timeline-img-2.jpg" alt="Black and White Eiffel Tower"" alt=" Black and white Mountian
-                  view">
               </article>
             </div>
           </div>
