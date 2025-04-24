@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script type="module" src="app.js"></script>
   <title>Tarea DIP (1975-1985)</title>
 </head>
 
@@ -17,11 +16,10 @@
       </header>
       <div class="carrousel">
         <div class="carousel-item">
-          <img src="img/header.avif" alt="Imagen de cabecera">
+          <img src="img/cujae-gradas.jpg" alt="Imagen de cabecera">
           <div class="carousel-caption">
             <h2>Hechos históricos</h2>
-            <p>Encuentra todo lo relacionado a la informática, la tecnología y la historia de Cuba en el contexto de la
-              CUJAE.</p>
+            <p>Encuentra todo lo relacionado a la historia de Cuba y de la CUJAE entre 1975 y 1984</p>
             <a href="https://cujae.edu.cu/">Saber más de la CUJAE</a>
           </div>
         </div>
@@ -30,7 +28,7 @@
         <h3>HITOS RELACIONADO CON LA CUJAE</h3>
         <div class="cards-wrapper">
           <article class="card">
-            <img src="./img/cujae-construccion.jpg" alt="Imagen de la construcción de la CUJAE">
+            <img src="./img/cujae.jpg" alt="Imagen de la construcción de la CUJAE">
             <div class="card-info">
               <h4>Fundación del Instituto Superior Politécnico José Antonio Echeveria</h4>
               <p>
@@ -53,14 +51,8 @@
             </div>
           </article>
           <article class="card">
-            <img src="./img/RAU.png" alt="Imagen cabacera de la revista universitaria Arquitectura y Urbanismo">
-            <div class="card-info">
-              <h4>Something happpened</h4>
-              <span class="date-year">1943</span>
-            </div>
-          </article>
-          <article class="card">
-            <img src="./img/RAU.png" alt="Imagen cabacera de la revista universitaria Arquitectura y Urbanismo">
+            <img src="./img/cujae-construccion.jpg"
+              alt="Imagen cabacera de la revista universitaria Arquitectura y Urbanismo">
             <div class="card-info">
               <h4>Fundación de la revista Arquitectura y Urbanismo</h4>
               <p>
@@ -77,22 +69,60 @@
       <section id="timeline">
         <h3 id="timeline-title">HISTORIA</h3>
         <div id="timeline-layout">
-          <div id="year-picker">
-            <ul>
-              <li class="active">
-                <a href="#fst-line">1975</a>
-              </li>
-              <li>
-                <a href="#nd-line">1978</a>
-              </li>
-              <li>
-                <a href="#thrd-line">1979</a>
-              </li>
-            </ul>
-          </div>
-          <div class="shadow"></div>
           <div id="timeline-wrapper">
+            <div class="zero-year">
+              <div>
+                <div>
+                  <h4>1972</h4>
+                  <div class="grid-wrapper">
+                    <article>
+                      <h3>Integración de Cuba al CAME</h3>
+                      <p>Cuba se integró al Consejo de Ayuda Mutua Económica (CAME) quedando incorporada a la división
+                        internacional socialista del trabajo. Esto ayudó a la la economía cubana enormemente ya que se
+                        promovía la unificación y coordinación de la cooperación en el desarrollo de una economía
+                        planificada, el progreso económico, científico y técnico y la igualación de los niveles de
+                        desarrollo económico de los países miembros. A través de esta organización era coordinado el
+                        sistema
+                        de trueque del comercio entre los países miembros y la coordinación de los planes de inversión a
+                        cabo y vinculantes. También como parte de la cooperación miles de jóvenes cubanos de distintos
+                        oficios viajaron a distintos paises del campo socialista aprender las tecnologías mas actuales
+                        en
+                        aquellos tiempos para mejorar todas las esferas del país.</p>
+                    </article>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h4>1976</h4>
+                    <div class="grid-wrapper">
+                      <article>
+                        <h3>Creación del MES</h3>
+                        <p>
+                          El Ministerio de Educación Superior se creó en julio de 1976 y es la encargada hasta el día de
+                          hoy
+                          de dirigir y supervisar la educación superior en el país, con el objetivo de garantizar una
+                          formación integral en los estudiantes universitarios. Su labor incluye proponer, crear,
+                          fusionar
+                          o
+                          cerrar carreras universitarias y aprobar sus planes de estudio, siempre alineados con las
+                          políticas
+                          del Estado. También se encarga de supervisar la formación de posgrado y promover la
+                          actualización
+                          continua de los profesionales, fomentando la investigación científica en coordinación con
+                          otros
+                          organismos y aprovechando los recursos existentes. Este ministerio constituyo una pieza
+                          fundamental
+                          en el perfeccionamiento educativo en Cuba ya que se garantizaba un sistema gratuito y de alta
+                          calidad capaz de rivalizar con otros sistemas de países mucho mas avanzados.
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div id="fst-line">
+              <h4>1985</h4>
               <div class="grid-wrapper fst-year">
                 <article>
                   <h3>Aprobación de la Constitución</h3>
@@ -121,7 +151,8 @@
               </div>
             </div>
             <div id="nd-line">
-              <div class="grid-wrapper">
+              <h4>1978 - 1980</h4>
+              <div class="grid-wrapper nd-year">
                 <article>
                   <h3>Cambio en las políticas migratorias</h3>
                   <p>En medio de las tensas situación del país con su emigración, se abordaron aspectos como las visitas
@@ -132,18 +163,14 @@
                   <p>Al mismo tiempo, durante estos años EE.UU. promovió las salidas ilegales del país y negaba las cada
                     vez más visas a los cubanos que deseaban llegar a EE.UU. legalmente.</p>
                 </article>
-              </div>
-            </div>
-            <div id="thrd-line">
-              <div class="grid-wrapper">
                 <article>
                   <h3>Éxodo del Mariel</h3>
-                  <p>tuvo lugar entre abril y octubre de 1980.Durante este período, alrededor de 125,000 cubanos
+                  <p>Tuvo lugar entre abril y octubre de 1980. Durante este período, alrededor de 125,000 cubanos
                     abandonaron la isla, aprovechando la apertura del gobierno cubano para que aquellos que deseaban
                     emigrar pudieran hacerlo. Muchos de los que emigraron eran personas que, en su mayoría, habían sido
                     influenciadas por la desinformación y la presión externa. A pesar de la difícil situación en Cuba,
-                    el
-                    gobierno continuó trabajando por el bienestar del pueblo y defendiendo los logros de la Revolución.
+                    el gobierno continuó trabajando por el bienestar del pueblo y defendiendo los logros de la
+                    Revolución.
                   </p>
                 </article>
               </div>
