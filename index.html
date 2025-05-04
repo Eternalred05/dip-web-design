@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="swiper.styles.css" />
+  <script type="module" src="app.js"></script>
   <title>Tarea DIP (1975-1985)</title>
 </head>
 
@@ -12,11 +14,21 @@
   <main>
     <div id="hero">
       <header>
-        <h4>Tarea DIP</h4>
+        <ul>
+          <li>
+            <a href="#cujae">CUJAE</a>
+          </li>
+          <li>
+            <a href="#tech">Tecnología</a>
+          </li>
+          <li>
+            <a href="#timeline-title">Historia</a>
+          </li>
+        </ul>
       </header>
       <div class="carrousel">
         <div class="carousel-item">
-          <img src="img/cujae-gradas.jpg" alt="Imagen de cabecera">
+          <img src="img/cujae.jpg" alt="Imagen de cabecera">
           <div class="carousel-caption">
             <h2>Hechos históricos</h2>
             <p>Encuentra todo lo relacionado a la historia de Cuba y de la CUJAE entre 1975 y 1984</p>
@@ -24,161 +36,325 @@
           </div>
         </div>
       </div>
-      <section>
-        <h3>HITOS RELACIONADO CON LA CUJAE</h3>
-        <div class="cards-wrapper">
-          <article class="card">
-            <img src="./img/cujae.jpg" alt="Imagen de la construcción de la CUJAE">
-            <div class="card-info">
-              <h4>Fundación del Instituto Superior Politécnico José Antonio Echeveria</h4>
+    </div>
+    <section>
+      <h3 id="cujae" class="has-icon">
+        <svg fill="currentColor" width="40px" viewBox="0 0 16 16">
+          <path
+            d="M16 6.28a1.23 1.23 0 0 0-.62-1.07l-6.74-4a1.27 1.27 0 0 0-1.28 0l-6.75 4a1.25 1.25 0 0 0 0 2.15l1.92 1.12v2.81a1.28 1.28 0 0 0 .62 1.09l4.25 2.45a1.28 1.28 0 0 0 1.24 0l4.25-2.45a1.28 1.28 0 0 0 .62-1.09V8.45l1.24-.73v2.72H16V6.28zm-3.73 5L8 13.74l-4.22-2.45V9.22l3.58 2.13a1.29 1.29 0 0 0 1.28 0l3.62-2.16zM8 10.27l-6.75-4L8 2.26l6.75 4z" />
+        </svg>
+        HISTORIA DE LA CUJAE
+      </h3>
+      <div class="cards-wrapper">
+        <article class="card">
+          <img src="./img/cujae-gradas.jpg" alt="Imagen de la construcción de la CUJAE">
+          <div class="card-info">
+            <h4>Fundación del Instituto Superior Politécnico José Antonio Echeveria</h4>
+            <p>
+              Se crea debido al crecimiento de las matriculas en las pocas universidades quedando definido como centro
+              para la preparación de especialistas en el campo de las ciencias técnicas.
+            </p>
+            <span class="date-year">Actividades docentes comenzaron en 1975</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="./img/intro-tecnologia-cuba.jpg" alt="Imagen de computadoras antiguas en una oficina">
+          <div class="card-info">
+            <h4>Desarrollo de la tecnología</h4>
+            <p>La CUJAE trabajó en conjunto con distintos ministerios para crear soluciones
+              informáticas a las necesidades del país, adaptando software de uso general al contexto de Cuba,
+              aportando
+              así al desarrollo tecnológico.
+            </p>
+            <span class="date-year">Década de los 70</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="./img/cujae-construccion.jpg"
+            alt="Imagen cabacera de la revista universitaria Arquitectura y Urbanismo">
+          <div class="card-info">
+            <h4>Fundación de la revista Arquitectura y Urbanismo</h4>
+            <p>
+              Se funda la revista universitaria “Arquitectura y Urbanismo”, una revista cuadrimestral editada en la
+              facultad de arquitectura la cual se centra en problemas relacionados con la arquitectura y el urbanismo
+              como sugiere su nombre, prestando especial atención a investigaciones sobre el hábitat, la
+              recuperación del patrimonio edificado y el ambiente construido, especialmente en vías de desarrollo.
+            </p>
+            <span class="date-year">1980</span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="tech">
+      <h3 id="tech" class="has-icon">
+        <svg fill="currentColor" width="40px" viewBox="0 0 14 14">
+          <path
+            d="m 11.8,10.6 0,-7.2035638 C 11.8,2.7367083 11.264337,2.2 10.603564,2.2 l -7.2071278,0 C 2.7367083,2.2 2.2,2.7356627 2.2,3.3964362 L 2.2,10.6 1,10.6 1,11.2 c 0,0.333681 0.2664272,0.6 0.5950819,0.6 l 10.8098361,0 C 12.726816,11.8 13,11.531371 13,11.2 l 0,-0.6 -1.2,0 z m -8.4,-7.2 7.2,0 0,5.4 -7.2,0 0,-5.4 z m 2.4,6.6 2.4,0 0,0.6 -2.4,0 0,-0.6 z" />
+        </svg>HITOS TECNOLÓGICOS
+      </h3>
+      <div class="slider-container">
+        <div class="slider-wrapper swiper-wrapper">
+          <div class="slider-item swiper-slide">
+            <div class="slider-content">
+              <h3 class="slider-title">Creación EMTELCUBA, antecesora de ETECSA</h3>
               <p>
-                Se crea debido al crecimiento de las matriculas en las pocas universidades quedando definido como centro
-                para la preparación de especialistas en el campo de las ciencias técnicas.
+                En 1977 se crea la empresa EMTELCUBA con el objetivo de centralizar la dirección del servicio de
+                comunicación telefónica en la Isla. En el período comprendido entre el 1959 y 1994, realizó
+                inversiones por un valor superior a los 1.000 millones de pesos, en redes de comunicaciones que
+                llevaron a la telefonía, hasta los lugares más apartados del territorio nacional, atenuando las
+                diferencias entre la capital y el resto de los territorios del país.
               </p>
-              <span class="date-year">Actividades docentes comenzaron en 1975</span>
-            </div>
-          </article>
-          <article class="card">
-            <img src="./img/intro-tecnologia-cuba.jpg" alt="Imagen de computadoras antiguas en una oficina">
-            <div class="card-info">
-              <h4>Desarrollo de la tecnología</h4>
-              <p>La CUJAE trabajó en conjunto con distintos ministerios para crear soluciones
-                informáticas a las necesidades del país, adaptando software de uso general al contexto de Cuba,
-                aportando
-                así al desarrollo tecnológico.
-              </p>
-              <span class="date-year">Década de los 70</span>
-            </div>
-          </article>
-          <article class="card">
-            <img src="./img/cujae-construccion.jpg"
-              alt="Imagen cabacera de la revista universitaria Arquitectura y Urbanismo">
-            <div class="card-info">
-              <h4>Fundación de la revista Arquitectura y Urbanismo</h4>
               <p>
-                Se funda la revista universitaria “Arquitectura y Urbanismo”, una revista cuadrimestral editada en la
-                facultad de arquitectura la cual se centra en problemas relacionados con la arquitectura y el urbanismo
-                como sugiere su nombre, prestando especial atención a investigaciones sobre el hábitat, la
-                recuperación del patrimonio edificado y el ambiente construido, especialmente en vías de desarrollo.
+                Además, se acometió la instalación de un cable coaxial a través de toda la Isla con el objetivo de
+                disminuir las diferencias entre la capital y el resto de los territorios del país.
               </p>
-              <span class="date-year">1980</span>
             </div>
-          </article>
-        </div>
-      </section>
-      <section id="timeline">
-        <h3 id="timeline-title">HISTORIA</h3>
-        <div id="timeline-layout">
-          <div id="timeline-wrapper">
-            <div class="zero-year">
-              <div>
-                <div>
-                  <h4>1972</h4>
-                  <div class="grid-wrapper">
-                    <article>
-                      <h3>Integración de Cuba al CAME</h3>
-                      <p>Cuba se integró al Consejo de Ayuda Mutua Económica (CAME) quedando incorporada a la división
-                        internacional socialista del trabajo. Esto ayudó a la la economía cubana enormemente ya que se
-                        promovía la unificación y coordinación de la cooperación en el desarrollo de una economía
-                        planificada, el progreso económico, científico y técnico y la igualación de los niveles de
-                        desarrollo económico de los países miembros. A través de esta organización era coordinado el
-                        sistema
-                        de trueque del comercio entre los países miembros y la coordinación de los planes de inversión a
-                        cabo y vinculantes. También como parte de la cooperación miles de jóvenes cubanos de distintos
-                        oficios viajaron a distintos paises del campo socialista aprender las tecnologías mas actuales
-                        en
-                        aquellos tiempos para mejorar todas las esferas del país.</p>
-                    </article>
-                  </div>
-                </div>
-                <div>
-                  <div>
-                    <h4>1976</h4>
-                    <div class="grid-wrapper">
-                      <article>
-                        <h3>Creación del MES</h3>
-                        <p>
-                          El Ministerio de Educación Superior se creó en julio de 1976 y es la encargada hasta el día de
-                          hoy
-                          de dirigir y supervisar la educación superior en el país, con el objetivo de garantizar una
-                          formación integral en los estudiantes universitarios. Su labor incluye proponer, crear,
-                          fusionar
-                          o
-                          cerrar carreras universitarias y aprobar sus planes de estudio, siempre alineados con las
-                          políticas
-                          del Estado. También se encarga de supervisar la formación de posgrado y promover la
-                          actualización
-                          continua de los profesionales, fomentando la investigación científica en coordinación con
-                          otros
-                          organismos y aprovechando los recursos existentes. Este ministerio constituyo una pieza
-                          fundamental
-                          en el perfeccionamiento educativo en Cuba ya que se garantizaba un sistema gratuito y de alta
-                          calidad capaz de rivalizar con otros sistemas de países mucho mas avanzados.
-                        </p>
-                      </article>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="slider-item swiper-slide">
+            <div class="slider-content">
+              <h3 class="slider-title">CID 300/10, teclados inteligentes y microcomputadora profesional IBM</h3>
+              <p>
+                En el año 1979, Cuba logra ingresar al sistema Intelsat, siendo el segundo país que utilizaba los
+                servicios de dos sistemas satelitales optimizando las señales de radio, televisión y telefonía.
+                En julio de 1979 Fidel inaugura el Palacio Central de Pioneros "Ernesto Guevara". En diciembre de 1984
+                dicho sitio se convertía en círculo de interés de computación electrónica para niños y jóvenes. La CID
+                300/10, teclados inteligentes, grabadoras de casettes y microcomputadora profesional IBM, entre otros
+                equipos, sirvieron como herramientas de prácticas para generaciones de cubanos, y finalmente el acceso
+                a la informática desde edades tempranas.
+              </p>
             </div>
-            <div id="fst-line">
-              <h4>1985</h4>
-              <div class="grid-wrapper fst-year">
-                <article>
-                  <h3>Aprobación de la Constitución</h3>
-                  <p>Hecho sin precedentes que declaró a Cuba como un Estado Socialista de derecho y justicia social,
-                    democrático, independiente y soberano. Primera Constitución socialista del hemisferio Occidental.
-                  </p>
-                </article>
-                <article>
-                  <h3>Primer Congreso del PCC</h3>
-                  <p>En esta etapa se lleva a cabo el Primer Congreso del Partido Comunista de Cuba.</p>
-                  <img src="./img/primer-congreso-del-pcc.jpg" alt="Imagen del Primer Congreso del PCC">
-                </article>
-                <article>
-                  <h3>Establecimiento del Poder Popular</h3>
-                  <p>La formación de la Asamblea Nacional de este órgano legislativo del país.</p>
-                  <p>El país se encontraba en un contexto favorable en el marco de estabilidad alcanzada en las
-                    relaciones
-                    económicas con la URSS.</p>
-                  <img src="./img/poder-popular.jpg" alt="Imagen de la Asamblea Nacional">
-                </article>
-                <article>
-                  <h3>Participación democráctica</h3>
-                  <p>6 millones de ciudadanos participaron en la discusión del anteproyecto en
-                    1975 de la Constitución que repercutieron en 60 artículos propuestos.</p>
-                </article>
-              </div>
-            </div>
-            <div id="nd-line">
-              <h4>1978 - 1980</h4>
-              <div class="grid-wrapper nd-year">
-                <article>
-                  <h3>Cambio en las políticas migratorias</h3>
-                  <p>En medio de las tensas situación del país con su emigración, se abordaron aspectos como las visitas
-                    a
-                    Cuba de los emigrados, la reunificación familiar, entre otras. Se autorizó a los emigrados cubanos
-                    la
-                    visita al país y la salida permanente a otros paises.</p>
-                  <p>Al mismo tiempo, durante estos años EE.UU. promovió las salidas ilegales del país y negaba las cada
-                    vez más visas a los cubanos que deseaban llegar a EE.UU. legalmente.</p>
-                </article>
-                <article>
-                  <h3>Éxodo del Mariel</h3>
-                  <p>Tuvo lugar entre abril y octubre de 1980. Durante este período, alrededor de 125,000 cubanos
-                    abandonaron la isla, aprovechando la apertura del gobierno cubano para que aquellos que deseaban
-                    emigrar pudieran hacerlo. Muchos de los que emigraron eran personas que, en su mayoría, habían sido
-                    influenciadas por la desinformación y la presión externa. A pesar de la difícil situación en Cuba,
-                    el gobierno continuó trabajando por el bienestar del pueblo y defendiendo los logros de la
-                    Revolución.
-                  </p>
-                </article>
-              </div>
+          </div>
+          <div class="slider-item swiper-slide">
+            <div class="slider-content">
+              <h3 class="slider-title">Vuelo espacial conjunto CUBA/URSS</h3>
+              <p>
+                Del 18 al 26 de septiembre tuvo lugar el vuelo espacial conjunto Cuba-URSS, en el cual participó el
+                primer cosmonauta cubano y latinoamericano Arnaldo Tamayo Méndez a bordo del cohete
+                portador Soyuz que pondría en órbita a la nave espacial Soyuz-38. Era la séptima tripulación
+                internacional del programa Interkosmos, que integraba en su desarrollo a los países miembros del
+                entonces Consejo de Ayuda Mutua Económica (CAME). El 26 de septiembre de 1980, Tamayo y Romanenko
+                regresan a
+                la Tierra en la cápsula de descenso de la nave Soyuz-38 que aterrizó en el cosmódromo de Kazajastán.
+                Ambos hombres dieron, en total, 124 vueltas alrededor de la Tierra, y permanecieron en el cosmos 7
+                días, 20 horas y 43 minutos y 24 segundos.
+                Gran parte de los equipos y experimentos de la misión fueron
+                producidos y diseñados en Cuba.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+        <div class="slider-controls">
+          <ul class="slider-pagination">
+            <li class="slider-tab active">Telecomunaciones</li>
+            <li class="slider-tab">Computadoras</li>
+            <li class="slider-tab">Aeronáutica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="timeline">
+      <h3 id="timeline-title" class="has-icon">
+        <svg width="40px" viewBox="0 0 512 512">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: currentColor;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 20px;
+              }
+            </style>
+          </defs>
+          <g data-name="Layer 2" id="Layer_2">
+            <g data-name="E425, History, log, manuscript" id="E425_History_log_manuscript">
+
+              <path class="cls-1"
+                d="M75.11,117h0A21.34,21.34,0,0,1,53.83,95.57V31.39A21.34,21.34,0,0,1,75.11,10h0A21.34,21.34,0,0,1,96.39,31.39V95.57A21.34,21.34,0,0,1,75.11,117Z" />
+
+              <rect class="cls-1" height="64.17" width="319.22" x="96.39" y="31.39" />
+
+              <rect class="cls-1" height="320.87" width="319.22" x="96.39" y="95.57" />
+
+              <path class="cls-1"
+                d="M34.34,39.08H53.83a0,0,0,0,1,0,0v48.8a0,0,0,0,1,0,0H34.34A24.34,24.34,0,0,1,10,63.54v-.13A24.34,24.34,0,0,1,34.34,39.08Z" />
+
+              <path class="cls-1"
+                d="M436.89,117h0a21.34,21.34,0,0,0,21.28-21.39V31.39A21.34,21.34,0,0,0,436.89,10h0a21.34,21.34,0,0,0-21.28,21.39V95.57A21.34,21.34,0,0,0,436.89,117Z" />
+
+              <path class="cls-1"
+                d="M482.51,39.08H502a0,0,0,0,1,0,0v48.8a0,0,0,0,1,0,0H482.51a24.34,24.34,0,0,1-24.34-24.34v-.13a24.34,24.34,0,0,1,24.34-24.34Z"
+                transform="translate(960.17 126.96) rotate(-180)" />
+              <path class="cls-1"
+                d="M75.11,395h0a21.34,21.34,0,0,0-21.28,21.39v64.18A21.34,21.34,0,0,0,75.11,502h0a21.34,21.34,0,0,0,21.28-21.39V416.43A21.34,21.34,0,0,0,75.11,395Z" />
+              <rect class="cls-1" height="64.17" width="319.22" x="96.39" y="416.43" />
+              <path class="cls-1"
+                d="M34.34,424.12H53.83a0,0,0,0,1,0,0v48.8a0,0,0,0,1,0,0H34.34A24.34,24.34,0,0,1,10,448.58v-.13A24.34,24.34,0,0,1,34.34,424.12Z" />
+              <path class="cls-1"
+                d="M436.89,395h0a21.34,21.34,0,0,1,21.28,21.39v64.18A21.34,21.34,0,0,1,436.89,502h0a21.34,21.34,0,0,1-21.28-21.39V416.43A21.34,21.34,0,0,1,436.89,395Z" />
+              <path class="cls-1"
+                d="M482.51,424.12H502a0,0,0,0,1,0,0v48.8a0,0,0,0,1,0,0H482.51a24.34,24.34,0,0,1-24.34-24.34v-.13a24.34,24.34,0,0,1,24.34-24.34Z"
+                <line class="cls-1" x1="143.41" x2="256" y1="140.11" y2="140.11" />
+              <line class="cls-1" x1="143.41" x2="371.26" y1="186.47" y2="186.47" />
+              <line class="cls-1" x1="143.41" x2="371.26" y1="232.82" y2="232.82" />
+              <line class="cls-1" x1="143.41" x2="371.26" y1="279.18" y2="279.18" />
+              <line class="cls-1" x1="143.41" x2="371.26" y1="325.53" y2="325.53" />
+              <line class="cls-1" x1="256" x2="371.26" y1="371.89" y2="371.89" />
+            </g>
+          </g>
+        </svg>
+        HISTORIA DE CUBA
+      </h3>
+      <div id="timeline-layout">
+        <div id="timeline-wrapper">
+          <div class="zero-year">
+            <div>
+              <div>
+                <h4>1972</h4>
+                <div class="grid-wrapper">
+                  <article>
+                    <h3>Integración de Cuba al CAME</h3>
+                    <p>Cuba se integró al Consejo de Ayuda Mutua Económica (CAME) quedando incorporada a la división
+                      internacional socialista del trabajo. Esto ayudó a la la economía cubana enormemente ya que se
+                      promovía la unificación y coordinación de la cooperación en el desarrollo de una economía
+                      planificada, el progreso económico, científico y técnico y la igualación de los niveles de
+                      desarrollo económico de los países miembros. A través de esta organización era coordinado el
+                      sistema
+                      de trueque del comercio entre los países miembros y la coordinación de los planes de inversión a
+                      cabo y vinculantes. También como parte de la cooperación miles de jóvenes cubanos de distintos
+                      oficios viajaron a distintos paises del campo socialista aprender las tecnologías mas actuales
+                      en
+                      aquellos tiempos para mejorar todas las esferas del país.</p>
+                  </article>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h4>1976</h4>
+                  <div class="grid-wrapper">
+                    <article>
+                      <h3>Creación del MES</h3>
+                      <p>
+                        El Ministerio de Educación Superior se creó en julio de 1976 y es la encargada hasta el día de
+                        hoy
+                        de dirigir y supervisar la educación superior en el país, con el objetivo de garantizar una
+                        formación integral en los estudiantes universitarios. Su labor incluye proponer, crear,
+                        fusionar
+                        o
+                        cerrar carreras universitarias y aprobar sus planes de estudio, siempre alineados con las
+                        políticas
+                        del Estado. También se encarga de supervisar la formación de posgrado y promover la
+                        actualización
+                        continua de los profesionales, fomentando la investigación científica en coordinación con
+                        otros
+                        organismos y aprovechando los recursos existentes. Este ministerio constituyo una pieza
+                        fundamental
+                        en el perfeccionamiento educativo en Cuba ya que se garantizaba un sistema gratuito y de alta
+                        calidad capaz de rivalizar con otros sistemas de países mucho mas avanzados.
+                      </p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="fst-line">
+            <h4>1985</h4>
+            <div class="grid-wrapper fst-year">
+              <article>
+                <h3>Aprobación de la Constitución</h3>
+                <p>Hecho sin precedentes que declaró a Cuba como un Estado Socialista de derecho y justicia social,
+                  democrático, independiente y soberano. Primera Constitución socialista del hemisferio Occidental.
+                </p>
+              </article>
+              <article>
+                <h3>Primer Congreso del PCC</h3>
+                <p>En esta etapa se lleva a cabo el Primer Congreso del Partido Comunista de Cuba.</p>
+                <img src="./img/primer-congreso-del-pcc.jpg" alt="Imagen del Primer Congreso del PCC">
+              </article>
+              <article>
+                <h3>Establecimiento del Poder Popular</h3>
+                <p>La formación de la Asamblea Nacional de este órgano legislativo del país.</p>
+                <p>El país se encontraba en un contexto favorable en el marco de estabilidad alcanzada en las
+                  relaciones
+                  económicas con la URSS.</p>
+                <img src="./img/poder-popular.jpg" alt="Imagen de la Asamblea Nacional">
+              </article>
+              <article>
+                <h3>Participación democráctica</h3>
+                <p>6 millones de ciudadanos participaron en la discusión del anteproyecto en
+                  1975 de la Constitución que repercutieron en 60 artículos propuestos.</p>
+              </article>
+            </div>
+          </div>
+          <div id="nd-line">
+            <h4>1978 - 1980</h4>
+            <div class="grid-wrapper nd-year">
+              <article>
+                <h3>Cambio en las políticas migratorias</h3>
+                <p>En medio de las tensas situación del país con su emigración, se abordaron aspectos como las visitas
+                  a
+                  Cuba de los emigrados, la reunificación familiar, entre otras. Se autorizó a los emigrados cubanos
+                  la
+                  visita al país y la salida permanente a otros paises.</p>
+                <p>Al mismo tiempo, durante estos años EE.UU. promovió las salidas ilegales del país y negaba las cada
+                  vez más visas a los cubanos que deseaban llegar a EE.UU. legalmente.</p>
+              </article>
+              <article>
+                <h3>Éxodo del Mariel</h3>
+                <p>Tuvo lugar entre abril y octubre de 1980. Durante este período, alrededor de 125,000 cubanos
+                  abandonaron la isla, aprovechando la apertura del gobierno cubano para que aquellos que deseaban
+                  emigrar pudieran hacerlo. Muchos de los que emigraron eran personas que, en su mayoría, habían sido
+                  influenciadas por la desinformación y la presión externa. A pesar de la difícil situación en Cuba,
+                  el gobierno continuó trabajando por el bienestar del pueblo y defendiendo los logros de la
+                  Revolución.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer>
+    <div class="footer-splitter">
+      <div>
+        <h3>Tarea de Diseño de Interfaces y Pruebas 2025</h3>
+        <h4>Período 2 (1975-1984)</h4>
+      </div>
+      <div>
+        <h5>INTEGRANTES</h5>
+        <ol>
+          <li>Brian Monteagudo Pérez</li>
+          <li>Javier Soto Villanueva</li>
+          <li>Gloria Santos Rosado</li>
+          <li>Alexandro Valdés Piñeda</li>
+          <li>Aylin Vázquez Alvarez</li>
+        </ol>
+      </div>
+      <div>
+        <ul class="links">
+          <li>
+            <a href="https://github.com/mbrianp05/dip-web-design">
+              <svg width="20px" viewBox="0 0 20 20">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-140.000000, -7559.000000)" fill="currentColor">
+                    <g transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
+                      </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              Repositorio de la página
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="swiper.js"></script>
 </body>
 
 </html>

@@ -54,6 +54,17 @@
   --active-link: hsl(200, 100%, 40%);
 }
 
+.has-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Karla", sans-serif;
   color: var(--text-clr);
@@ -63,6 +74,7 @@ body {
 #hero {
   height: 50vh;
   position: relative;
+  overflow: hidden;
 }
 
 @keyframes blur {
@@ -91,33 +103,34 @@ header {
   position: fixed;
   width: 100%;
   z-index: 20;
-  display: grid;
-  grid-template-columns: 300px 1fr 300px;
-  place-content: center;
-  place-items: center;
   animation: blur 0.5s ease-in-out both;
   animation-timeline: scroll(block);
   animation-range: 50px 250px;
 
-  h4 {
-    font-size: 1.8em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 500;
+  ul {
+    display: flex;
+    gap: 2rem;
     width: 100%;
+    text-transform: uppercase;
+    justify-content: center;
+
+    a {
+      font-size: 1.1rem;
+      font-weight: 450;
+    }
   }
 }
 
 .zero-year {
-  margin-top: 20px;
+  margin-top: 60px;
 
   & > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    justify-content: space-around;
 
-    .grid-wrapper:nth-child(2) {
-      border-left: 5px solid var(--border-clr);
+    & > div:nth-child(2) .grid-wrapper {
+      border-left: 1px solid var(--border-clr);
     }
   }
 }
@@ -140,14 +153,18 @@ header {
   width: 100%;
   position: relative;
 
+  img {
+    filter: contrast(30%) saturate(0.5) blur(2px);
+  }
+
   &::before {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 45%;
+    width: 60%;
     height: 100%;
-    background-color: rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 40%);
     filter: blur(60px);
     z-index: 2;
   }
@@ -178,11 +195,12 @@ header {
 
 .carousel-item .carousel-caption {
   position: absolute;
-  color: var(--txt-clr);
+  color: #f0f0f0;
   z-index: 10;
   top: 30%;
   left: 0;
   padding-left: 70px;
+  width: 60%;
 }
 
 .carousel-item .carousel-caption h2 {
@@ -225,6 +243,7 @@ article.card {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  height: 300px;
 
   p {
     text-wrap: balance;
@@ -361,7 +380,7 @@ article.card {
     }
 
     img {
-      width: 260px;
+      width: 300px;
     }
 
     padding: 1rem;
@@ -399,4 +418,151 @@ article.card {
   article:nth-child(2) {
     border-left: 1px solid var(--border-clr);
   }
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.slider-wrapper .slider-item {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #010101;
+
+  &:before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: contrast(20%) saturate(0.5) blur(2px);
+  }
+
+  &:nth-child(1):before {
+    background-image: url("./img/phones.jpg");
+  }
+
+  &:nth-child(2):before {
+    background-image: url("./img/cid_201a-computadora-cubana.png");
+  }
+
+  &:nth-child(3):before {
+    background-image: url("./img/space-travel.jpg");
+  }
+}
+
+.slider-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 10px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+
+  &:before {
+    inset: 0;
+    content: "";
+    position: absolute;
+    background: rgb(0 0 0 / 50%);
+    filter: blur(50px);
+    z-index: -1;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+}
+
+#tech {
+  padding-inline: 0;
+}
+
+.slider-container .slider-controls {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  width: 100%;
+
+  &:before {
+    inset: 0;
+    content: "";
+    position: absolute;
+    background: rgb(0 0 0 / 50%);
+    filter: blur(50px);
+    z-index: -1;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    .active {
+      border-bottom-color: #fff;
+    }
+  }
+
+  .slider-tab {
+    font-weight: 500;
+    width: 200px;
+    font-size: 0.9rem;
+    padding: 20px 30px;
+    text-align: center;
+    border-bottom: 3px solid rgb(255 255 255 / 0.5);
+    cursor: pointer;
+  }
+}
+
+footer {
+  background-color: #020202;
+  padding: 4rem 70px;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 540;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 450;
+    color: #a0a0a0;
+    margin-top: 5px;
+  }
+
+  h5 {
+    font-size: 1.05rem;
+  }
+
+  .links {
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  ol {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+  }
+}
+
+.footer-splitter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
