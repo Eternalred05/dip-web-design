@@ -62,6 +62,10 @@
   width: 250px;
 
   &:hover {
+    a {
+      color: var(--hover-crl);
+    }
+
     svg {
       rotate: 180deg;
     }
