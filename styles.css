@@ -63,12 +63,13 @@
 
   &:hover {
     a {
-      color: var(--hover-crl);
+      color: var(--hover-clr);
     }
 
     svg {
       rotate: 180deg;
     }
+
     background: var(--card-clr);
   }
 
